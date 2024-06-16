@@ -1,7 +1,7 @@
 import { ID, ImageGravity, Query } from "appwrite";
 
 import { appwriteConfig, account, databases, storage, avatars } from "./config";
-import { IUpdatePost, INewPost, INewUser, IUpdateUser } from "@/typse";
+import { IUpdatePost, INewPost, INewUser,  IUpdateUser2 } from "@/typse";
 
 // ============================================================
 // AUTH
@@ -516,7 +516,7 @@ export async function getUsers(limit?: number) {
   }
   
   // ============================== UPDATE USER
-  export async function updateUser(user: IUpdateUser) {
+  export async function updateUser(user: IUpdateUser2) {
     const hasFileToUpdate = user.file.length > 0;
     try {
       let image = {
