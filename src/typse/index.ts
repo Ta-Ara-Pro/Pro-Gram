@@ -26,14 +26,14 @@ export type INavLink = {
   file: File[];
 };
 
-  // export type IUpdateUser = {
-  //   userId: string;
-  //   name: string;
-  //   bio: string;
-  //   imageId: string;
-  //   imageUrl: URL | string;
-  //   file: File[];
-  // };
+  export type IUpdateUser2 = {
+    userId: string;
+    name: string;
+    bio: string;
+    imageId: string;
+    imageUrl: URL | string;
+    file: File[];
+  };
   
   export type INewPost = {
     userId: string;
