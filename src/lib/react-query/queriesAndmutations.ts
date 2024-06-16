@@ -11,15 +11,12 @@ import {
   signInAccount,
   getCurrentUser,
   signOutAccount,
-//   getUsers,
   createPost,
   getPostById,
   updatePost,
   getUserPosts,
   deletePost,
   likePost,
-//   getUserById,
-//   updateUser,
   getRecentPosts,
   getInfinitePosts,
   searchPosts,
@@ -31,7 +28,7 @@ import {
   fetchUserLikedPosts,
   getSavedPosts,
   } from "@/lib/appwrite/api";
-  import { INewPost, INewUser, IUpdatePost, IUpdateUser } from "@/typse";
+  import { INewPost, INewUser, IUpdatePost,  IUpdateUser2 } from "@/typse";
   import { useUserContext } from '@/context/AuthContext'
   
   // ============================================================
@@ -250,11 +247,11 @@ export const useGetCurrentUser = () => {
       enabled: !!userId,
     });
   };
-  
+   
   export const useUpdateUser = () => {
     const queryClient = useQueryClient();
     return useMutation({
-      mutationFn: (user: IUpdateUser) => updateUser(user),
+      mutationFn: (user: IUpdateUser2) => updateUser(user),
       onSuccess: (data) => {
         queryClient.invalidateQueries({
           queryKey: [QUERY_KEYS.GET_CURRENT_USER],
